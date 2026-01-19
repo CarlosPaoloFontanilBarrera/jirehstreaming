@@ -3,136 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jireh Streaming | Catálogo Oficial Perú</title>
+    <title>Jireh Streaming | Catálogo Premium Perú</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #FFD700; 
-            --bg: #0b0f19;
-            --card: #161b28;
+            --bg: #05070a;
+            --card: #111827;
             --text: #ffffff;
             --whatsapp: #25d366;
             --accent: #FF4500;
+            --glass: rgba(255, 255, 255, 0.05);
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
+        /* HEADER PREMIUM */
         header {
-            background: linear-gradient(135deg, #161b28 0%, #0b0f19 100%);
-            padding: 50px 20px;
+            background: linear-gradient(180deg, #111827 0%, #05070a 100%);
+            padding: 60px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+            position: relative;
         }
 
-        .logo-text {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
+        .logo-container h1 {
+            font-size: 2.8rem;
             margin: 0;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.2);
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            letter-spacing: -1px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+        /* CATEGORÍAS */
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
 
-        .category-title {
+        .section-title {
             display: flex;
             align-items: center;
             margin: 40px 0 20px;
-            color: var(--primary);
             font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 700;
             text-transform: uppercase;
-            border-left: 5px solid var(--primary);
-            padding-left: 15px;
         }
 
+        .section-title i { margin-right: 15px; font-size: 1.2rem; }
+
+        /* GRID Y TARJETAS */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 20px;
         }
 
         .card {
             background: var(--card);
-            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 20px;
             padding: 20px;
             text-align: center;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #2d3748;
+            transition: all 0.4s ease;
             position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
         }
 
-        .badge {
-            background: var(--accent);
-            color: white;
-            font-size: 0.7rem;
-            padding: 3px 10px;
-            border-radius: 20px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-weight: bold;
+        .card h3 { font-size: 1.1rem; margin: 10px 0 5px; }
+        .card p { font-size: 0.8rem; color: #9ca3af; margin-bottom: 15px; min-height: 40px; }
+
+        .price-box {
+            background: var(--glass);
+            padding: 10px;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
-        .price {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 15px 0;
-        }
+        .price-label { font-size: 0.7rem; color: var(--primary); display: block; }
+        .price-value { font-size: 1.4rem; font-weight: 800; }
 
         .btn-buy {
-            background-color: var(--whatsapp);
-            color: white;
+            background: var(--whatsapp);
+            color: #fff;
             text-decoration: none;
             padding: 12px;
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 0.9rem;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: 0.3s;
         }
 
+        .btn-buy:hover { filter: brightness(1.1); }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 800;
+        }
+
+        /* PAGOS */
         footer {
-            text-align: center;
+            background: #000;
             padding: 60px 20px;
-            background: #05070a;
+            text-align: center;
             margin-top: 50px;
         }
 
-        .payment-info {
-            background: rgba(142, 36, 170, 0.1);
+        .payment-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #1f2937;
+            padding: 10px 25px;
+            border-radius: 50px;
             border: 1px solid #8e24aa;
-            padding: 15px;
-            border-radius: 12px;
-            display: inline-block;
             margin-bottom: 20px;
         }
 
         .floating-ws {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: var(--whatsapp);
             width: 60px;
             height: 60px;
@@ -141,101 +155,138 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 100;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
             text-decoration: none;
         }
 
         @media (max-width: 480px) {
-            .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .logo-text { font-size: 1.8rem; }
+            .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .logo-container h1 { font-size: 2rem; }
+            .container { padding: 10px; }
             .card { padding: 15px; }
-            .price { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-text">JIREH STREAMING</div>
-        <p>Tu Entretenimiento Favorito en un Solo Lugar</p>
+        <div class="logo-container">
+            <h1>JIREH STREAMING</h1>
+            <p>Premium Entertainment Experience • Perú</p>
+        </div>
     </header>
 
     <div class="container">
         
-        <div class="category-title"><i class="fas fa-bolt" style="margin-right:12px"></i> Combos Ahorro Perú</div>
+        <div class="section-title"><i class="fas fa-crown"></i> Combos Exclusivos (Tríos)</div>
         <div class="grid">
-            <div class="card" style="border-color: var(--accent);">
-                <span class="badge">RECOMENDADO</span>
-                <h3>Dúo Pack</h3>
-                <p>Disney+ & Crunchyroll</p>
-                <span class="price">S/ 22.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Duo+Pack" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+            <div class="card" style="border: 1px solid var(--accent)">
+                <span class="badge">MEJOR VALOR</span>
+                <h3>Trío Gamer</h3>
+                <p>HBOMax + Disney + Crunchyroll</p>
+                <div class="price-box">
+                    <span class="price-label">Precio Final</span>
+                    <span class="price-value">S/ 36.00</span>
+                </div>
+                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Trio+Gamer" class="btn-buy"><i class="fab fa-whatsapp"></i> SOLICITAR</a>
             </div>
-            <div class="card" style="border-color: var(--accent);">
-                <span class="badge">PREMIUM</span>
-                <h3>Trio Cine</h3>
-                <p>Netflix + Disney + Max</p>
-                <span class="price">S/ 38.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Trio+Cine" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+            <div class="card" style="border: 1px solid var(--accent)">
+                <span class="badge">POPULAR</span>
+                <h3>Trío Netflix</h3>
+                <p>Netflix + Disney + HBO</p>
+                <div class="price-box">
+                    <span class="price-label">Precio Final</span>
+                    <span class="price-value">S/ 45.00</span>
+                </div>
+                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Trio+Netflix" class="btn-buy"><i class="fab fa-whatsapp"></i> SOLICITAR</a>
             </div>
         </div>
 
-        <div class="category-title"><i class="fas fa-play" style="margin-right:12px"></i> Streaming Individual</div>
+        <div class="section-title"><i class="fas fa-tv"></i> Video Streaming</div>
         <div class="grid">
             <div class="card">
                 <h3>Netflix</h3>
-                <p>Perfil Ultra HD 4K</p>
-                <span class="price">S/ 12.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+Netflix" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <p>Perfil Ultra HD 4K (30 días)</p>
+                <div class="price-box"><span class="price-value">S/ 22.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Netflix" class="btn-buy">COMPRAR</a>
             </div>
             <div class="card">
-                <h3>Disney+</h3>
-                <p>Catálogo Completo</p>
-                <span class="price">S/ 15.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+Disney" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <h3>Disney+ Premium</h3>
+                <p>Catálogo completo 4K</p>
+                <div class="price-box"><span class="price-value">S/ 16.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Disney" class="btn-buy">COMPRAR</a>
             </div>
             <div class="card">
-                <h3>Max</h3>
-                <p>Todo HBO y Discovery</p>
-                <span class="price">S/ 12.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+Max" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <h3>Vix Premium</h3>
+                <p>Liga MX y Contenido Pro</p>
+                <div class="price-box"><span class="price-value">S/ 11.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Vix" class="btn-buy">COMPRAR</a>
             </div>
             <div class="card">
-                <h3>Prime Video</h3>
-                <p>Amazon Original</p>
-                <span class="price">S/ 10.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+PrimeVideo" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <h3>Paramount+</h3>
+                <p>Cine y Premier League</p>
+                <div class="price-box"><span class="price-value">S/ 12.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Paramount" class="btn-buy">COMPRAR</a>
             </div>
         </div>
 
-        <div class="category-title"><i class="fas fa-star" style="margin-right:12px"></i> Apps y Diseño</div>
+        <div class="section-title"><i class="fas fa-music"></i> Música Premium</div>
         <div class="grid">
             <div class="card">
-                <h3>Canva Pro</h3>
-                <p>Diseño Ilimitado</p>
-                <span class="price">S/ 10.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+CanvaPro" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <h3>Spotify Premium</h3>
+                <p>Cuenta personal 1 mes</p>
+                <div class="price-box"><span class="price-value">S/ 17.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Spotify" class="btn-buy">COMPRAR</a>
             </div>
             <div class="card">
-                <h3>YouTube</h3>
-                <p>Premium Sin Anuncios</p>
-                <span class="price">S/ 12.00</span>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+comprar+YouTube" class="btn-buy"><i class="fab fa-whatsapp"></i> PEDIR</a>
+                <h3>YouTube Premium</h3>
+                <p>Cero anuncios + Music</p>
+                <div class="price-box"><span class="price-value">S/ 15.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+YouTube" class="btn-buy">COMPRAR</a>
+            </div>
+            <div class="card">
+                <h3>Tidal HiFi</h3>
+                <p>Calidad de sonido Máxima</p>
+                <div class="price-box"><span class="price-value">S/ 10.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Tidal" class="btn-buy">COMPRAR</a>
+            </div>
+        </div>
+
+        <div class="section-title"><i class="fas fa-code"></i> Software & VPN</div>
+        <div class="grid">
+            <div class="card">
+                <h3>Windows 11 Pro</h3>
+                <p>Licencia Original Vitalicia</p>
+                <div class="price-box"><span class="price-value">S/ 35.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Windows11" class="btn-buy">COMPRAR</a>
+            </div>
+            <div class="card">
+                <h3>Office 365</h3>
+                <p>5 Disp. + 1TB OneDrive</p>
+                <div class="price-box"><span class="price-value">S/ 40.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Office365" class="btn-buy">COMPRAR</a>
+            </div>
+            <div class="card">
+                <h3>Canva Pro</h3>
+                <p>Diseño sin límites</p>
+                <div class="price-box"><span class="price-value">S/ 15.00</span></div>
+                <a href="https://wa.me/51905989258?text=Quiero+Canva" class="btn-buy">COMPRAR</a>
             </div>
         </div>
 
     </div>
 
     <footer>
-        <div class="payment-info">
-            <i class="fas fa-check-circle"></i> Aceptamos <strong>YAPE</strong> y <strong>PLIN</strong>
+        <div class="payment-pill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Yape_logo.png" height="25" alt="Yape">
+            <span>Aceptamos YAPE y PLIN</span>
         </div>
-        <div style="color: #718096; font-size: 0.9rem;">
-            <p>&copy; 2026 Jireh Streaming Perú</p>
-            <p>Activación inmediata tras verificar el pago.</p>
-        </div>
+        <p style="color: #6b7280; font-size: 0.85rem;">
+            © 2026 Jireh Streaming Perú • Soporte VIP 24/7<br>
+            Activación inmediata tras confirmación de pago.
+        </p>
     </footer>
 
     <a href="https://wa.me/51905989258" class="floating-ws">
