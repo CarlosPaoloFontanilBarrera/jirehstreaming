@@ -3,295 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jireh Streaming | Catálogo Premium Perú</title>
+    <title>Jireh Streaming | Catálogo Premium 46 Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FFD700; 
-            --bg: #05070a;
-            --card: #111827;
-            --text: #ffffff;
-            --whatsapp: #25d366;
-            --accent: #FF4500;
-            --glass: rgba(255, 255, 255, 0.05);
+            --primary: #FFD700; --bg: #05070a; --card: #111827; --text: #ffffff;
+            --whatsapp: #25d366; --accent: #FF4500; --glass: rgba(255, 255, 255, 0.05);
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-            line-height: 1.5;
-        }
-
-        /* HEADER PREMIUM */
-        header {
-            background: linear-gradient(180deg, #111827 0%, #05070a 100%);
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-            position: relative;
-        }
-
-        .logo-container h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            background: linear-gradient(to right, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-
-        /* CATEGORÍAS */
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            margin: 40px 0 20px;
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .section-title i { margin-right: 15px; font-size: 1.2rem; }
-
-        /* GRID Y TARJETAS */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid rgba(255, 215, 0, 0.1);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-        }
-
-        .card h3 { font-size: 1.1rem; margin: 10px 0 5px; }
-        .card p { font-size: 0.8rem; color: #9ca3af; margin-bottom: 15px; min-height: 40px; }
-
-        .price-box {
-            background: var(--glass);
-            padding: 10px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        .price-label { font-size: 0.7rem; color: var(--primary); display: block; }
-        .price-value { font-size: 1.4rem; font-weight: 800; }
-
-        .btn-buy {
-            background: var(--whatsapp);
-            color: #fff;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            transition: 0.3s;
-        }
-
-        .btn-buy:hover { filter: brightness(1.1); }
-
-        .badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--accent);
-            padding: 4px 10px;
-            border-radius: 30px;
-            font-size: 0.65rem;
-            font-weight: 800;
-        }
-
-        /* PAGOS */
-        footer {
-            background: #000;
-            padding: 60px 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .payment-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background: #1f2937;
-            padding: 10px 25px;
-            border-radius: 50px;
-            border: 1px solid #8e24aa;
-            margin-bottom: 20px;
-        }
-
-        .floating-ws {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: var(--whatsapp);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            color: #fff;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        @media (max-width: 480px) {
-            .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-            .logo-container h1 { font-size: 2rem; }
-            .container { padding: 10px; }
-            .card { padding: 15px; }
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: linear-gradient(180deg, #111827 0%, #05070a 100%); padding: 60px 20px; text-align: center; border-bottom: 2px solid var(--primary); }
+        .logo-container h1 { font-size: 2.8rem; margin: 0; color: var(--primary); font-weight: 900; letter-spacing: -1px; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .section-title { display: flex; align-items: center; margin: 40px 0 20px; font-size: 1.4rem; color: var(--primary); font-weight: 700; text-transform: uppercase; border-left: 5px solid var(--primary); padding-left: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+        .card { background: var(--card); border: 1px solid rgba(255, 215, 0, 0.1); border-radius: 20px; padding: 20px; text-align: center; transition: 0.3s; position: relative; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .card h3 { font-size: 1rem; margin: 10px 0 5px; font-weight: 700; }
+        .card p { font-size: 0.8rem; color: #9ca3af; margin-bottom: 15px; min-height: 35px; }
+        .price-box { background: var(--glass); padding: 10px; border-radius: 12px; margin-bottom: 15px; }
+        .price-value { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+        .btn-buy { background: var(--whatsapp); color: #fff; text-decoration: none; padding: 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 0.85rem; }
+        .badge { position: absolute; top: 10px; right: 10px; background: var(--accent); padding: 4px 10px; border-radius: 30px; font-size: 0.6rem; font-weight: 800; }
+        footer { background: #000; padding: 50px 20px; text-align: center; margin-top: 50px; border-top: 1px solid #1f2937; }
+        .payment-pill { display: inline-flex; align-items: center; gap: 10px; background: #1f2937; padding: 10px 25px; border-radius: 50px; border: 1px solid #8e24aa; margin-bottom: 20px; }
+        .floating-ws { position: fixed; bottom: 25px; right: 25px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: #fff; z-index: 1000; text-decoration: none; }
+        @media (max-width: 480px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .logo-container h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <h1>JIREH STREAMING</h1>
-            <p>Premium Entertainment Experience • Perú</p>
-        </div>
-    </header>
+<header>
+    <div class="logo-container"><h1>JIREH STREAMING</h1><p>Catálogo Oficial Total • 46 Servicios • Perú</p></div>
+</header>
 
-    <div class="container">
-        
-        <div class="section-title"><i class="fas fa-crown"></i> Combos Exclusivos (Tríos)</div>
-        <div class="grid">
-            <div class="card" style="border: 1px solid var(--accent)">
-                <span class="badge">MEJOR VALOR</span>
-                <h3>Trío Gamer</h3>
-                <p>HBOMax + Disney + Crunchyroll</p>
-                <div class="price-box">
-                    <span class="price-label">Precio Final</span>
-                    <span class="price-value">S/ 36.00</span>
-                </div>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Trio+Gamer" class="btn-buy"><i class="fab fa-whatsapp"></i> SOLICITAR</a>
-            </div>
-            <div class="card" style="border: 1px solid var(--accent)">
-                <span class="badge">POPULAR</span>
-                <h3>Trío Netflix</h3>
-                <p>Netflix + Disney + HBO</p>
-                <div class="price-box">
-                    <span class="price-label">Precio Final</span>
-                    <span class="price-value">S/ 45.00</span>
-                </div>
-                <a href="https://wa.me/51905989258?text=Hola+Jireh+Streaming+quiero+el+Trio+Netflix" class="btn-buy"><i class="fab fa-whatsapp"></i> SOLICITAR</a>
-            </div>
-        </div>
-
-        <div class="section-title"><i class="fas fa-tv"></i> Video Streaming</div>
-        <div class="grid">
-            <div class="card">
-                <h3>Netflix</h3>
-                <p>Perfil Ultra HD 4K (30 días)</p>
-                <div class="price-box"><span class="price-value">S/ 22.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Netflix" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Disney+ Premium</h3>
-                <p>Catálogo completo 4K</p>
-                <div class="price-box"><span class="price-value">S/ 16.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Disney" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Vix Premium</h3>
-                <p>Liga MX y Contenido Pro</p>
-                <div class="price-box"><span class="price-value">S/ 11.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Vix" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Paramount+</h3>
-                <p>Cine y Premier League</p>
-                <div class="price-box"><span class="price-value">S/ 12.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Paramount" class="btn-buy">COMPRAR</a>
-            </div>
-        </div>
-
-        <div class="section-title"><i class="fas fa-music"></i> Música Premium</div>
-        <div class="grid">
-            <div class="card">
-                <h3>Spotify Premium</h3>
-                <p>Cuenta personal 1 mes</p>
-                <div class="price-box"><span class="price-value">S/ 17.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Spotify" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>YouTube Premium</h3>
-                <p>Cero anuncios + Music</p>
-                <div class="price-box"><span class="price-value">S/ 15.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+YouTube" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Tidal HiFi</h3>
-                <p>Calidad de sonido Máxima</p>
-                <div class="price-box"><span class="price-value">S/ 10.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Tidal" class="btn-buy">COMPRAR</a>
-            </div>
-        </div>
-
-        <div class="section-title"><i class="fas fa-code"></i> Software & VPN</div>
-        <div class="grid">
-            <div class="card">
-                <h3>Windows 11 Pro</h3>
-                <p>Licencia Original Vitalicia</p>
-                <div class="price-box"><span class="price-value">S/ 35.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Windows11" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Office 365</h3>
-                <p>5 Disp. + 1TB OneDrive</p>
-                <div class="price-box"><span class="price-value">S/ 40.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Office365" class="btn-buy">COMPRAR</a>
-            </div>
-            <div class="card">
-                <h3>Canva Pro</h3>
-                <p>Diseño sin límites</p>
-                <div class="price-box"><span class="price-value">S/ 15.00</span></div>
-                <a href="https://wa.me/51905989258?text=Quiero+Canva" class="btn-buy">COMPRAR</a>
-            </div>
-        </div>
-
+<div class="container">
+    <div class="section-title"><i class="fas fa-layer-group"></i> Combos y Tríos Ahorro</div>
+    <div class="grid">
+        <div class="card"><span class="badge">TOP</span><h3>Combo 5 Plataformas</h3><p>Full Entretenimiento</p><div class="price-box"><span class="price-value">S/ 68.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Combo5" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Trío: Netflix+Disney+HBO</h3><p>Cine Total</p><div class="price-box"><span class="price-value">S/ 45.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Trio+Netflix+Disney+HBO" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Trío: Netflix+Disney+Crunchy</h3><p>Animé y Cine</p><div class="price-box"><span class="price-value">S/ 42.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Trio+Netflix+Disney+Crunchy" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Trío: HBO+Disney+Crunchy</h3><p>Pack Gamer</p><div class="price-box"><span class="price-value">S/ 36.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Trio+HBO+Disney+Crunchy" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Trío: Netflix+HBO+Crunchy</h3><p>Series Pro</p><div class="price-box"><span class="price-value">S/ 40.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Trio+Netflix+HBO+Crunchy" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Cuarteto: Dis+Cru+Net+HBO</h3><p>Mega Pack</p><div class="price-box"><span class="price-value">S/ 56.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Cuarteto" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Dúo: Netflix+Disney+</h3><p>Clásico</p><div class="price-box"><span class="price-value">S/ 35.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Duo+Netflix+Disney" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Dúo: Disney+HBO Max</h3><p>Dúo Dinámico</p><div class="price-box"><span class="price-value">S/ 26.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Duo+Disney+HBO" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Dúo: Crunchy+Disney+</h3><p>Para Niños</p><div class="price-box"><span class="price-value">S/ 24.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Duo+Crunchy+Disney" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Dúo: Netflix+HBO Max</h3><p>Películas</p><div class="price-box"><span class="price-value">S/ 32.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Duo+Netflix+HBO" class="btn-buy">PEDIR</a></div>
+        <div class="card"><h3>Dúo: Prime+Disney+</h3><p>Amazon & Disney</p><div class="price-box"><span class="price-value">S/ 26.00</span></div><a href="https://wa.me/51905989258?text=Quiero+Duo+Prime+Disney" class="btn-buy">PEDIR</a></div>
     </div>
 
-    <footer>
-        <div class="payment-pill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Yape_logo.png" height="25" alt="Yape">
-            <span>Aceptamos YAPE y PLIN</span>
-        </div>
-        <p style="color: #6b7280; font-size: 0.85rem;">
-            © 2026 Jireh Streaming Perú • Soporte VIP 24/7<br>
-            Activación inmediata tras confirmación de pago.
-        </p>
-    </footer>
+    <div class="section-title"><i class="fas fa-video"></i> Video Streaming</div>
+    <div class="grid">
+        <div class="card"><h3>Netflix</h3><p>Ultra HD 4K</p><div class="price-box"><span class="price-value">S/ 22.00</span></div><a href="https://wa.me/51905989258?text=Netflix" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Disney+ Premium</h3><p>Catálogo Full</p><div class="price-box"><span class="price-value">S/ 16.00</span></div><a href="https://wa.me/51905989258?text=Disney" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Max (HBO)</h3><p>Todo el contenido</p><div class="price-box"><span class="price-value">S/ 13.00</span></div><a href="https://wa.me/51905989258?text=Max" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Prime Video</h3><p>Amazon Original</p><div class="price-box"><span class="price-value">S/ 13.00</span></div><a href="https://wa.me/51905989258?text=Prime" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Paramount+</h3><p>Cine y Deportes</p><div class="price-box"><span class="price-value">S/ 12.00</span></div><a href="https://wa.me/51905989258?text=Paramount" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Vix Premium</h3><p>Fútbol y Novelas</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Vix" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Universal+</h3><p>Series Premium</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Universal" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Apple TV</h3><p>Originals</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=AppleTV" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Mubi</h3><p>Cine Selecto</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Mubi" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Crunchyroll Premium</h3><p>Anime</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Crunchyroll" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Viki Rakuten</h3><p>Contenido Asiático</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Viki" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>IPTV Latino</h3><p>+1000 Canales</p><div class="price-box"><span class="price-value">S/ 25.00</span></div><a href="https://wa.me/51905989258?text=IPTV" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Magis TV</h3><p>Estrenos/Deportes</p><div class="price-box"><span class="price-value">S/ 25.00</span></div><a href="https://wa.me/51905989258?text=Magis" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Teletica</h3><p>Canal Costarricense</p><div class="price-box"><span class="price-value">S/ 15.00</span></div><a href="https://wa.me/51905989258?text=Teletica" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Youtube Premium</h3><p>Sin Anuncios</p><div class="price-box"><span class="price-value">S/ 15.00</span></div><a href="https://wa.me/51905989258?text=Youtube" class="btn-buy">COMPRAR</a></div>
+    </div>
 
-    <a href="https://wa.me/51905989258" class="floating-ws">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="section-title"><i class="fas fa-headphones"></i> Música Premium</div>
+    <div class="grid">
+        <div class="card"><h3>Spotify Premium</h3><p>Cuentas Personales</p><div class="price-box"><span class="price-value">S/ 17.00</span></div><a href="https://wa.me/51905989258?text=Spotify" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Apple Music</h3><p>Calidad Lossless</p><div class="price-box"><span class="price-value">S/ 13.00</span></div><a href="https://wa.me/51905989258?text=AppleMusic" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Tidal HiFi</h3><p>Sonido de Estudio</p><div class="price-box"><span class="price-value">S/ 10.00</span></div><a href="https://wa.me/51905989258?text=Tidal" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Deezer Pro</h3><p>Audio HD</p><div class="price-box"><span class="price-value">S/ 10.00</span></div><a href="https://wa.me/51905989258?text=Deezer" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Amazon Music</h3><p>Full Catálogo</p><div class="price-box"><span class="price-value">S/ 13.00</span></div><a href="https://wa.me/51905989258?text=AmazonMusic" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Soundcloud Go+</h3><p>Electrónica/DJ</p><div class="price-box"><span class="price-value">S/ 15.00</span></div><a href="https://wa.me/51905989258?text=Soundcloud" class="btn-buy">COMPRAR</a></div>
+    </div>
+
+    <div class="section-title"><i class="fas fa-code"></i> Software & VPN</div>
+    <div class="grid">
+        <div class="card"><h3>Canva Pro</h3><p>Diseño Ilimitado</p><div class="price-box"><span class="price-value">S/ 14.00</span></div><a href="https://wa.me/51905989258?text=Canva" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Canva Pro Edu</h3><p>Estudiantes</p><div class="price-box"><span class="price-value">S/ 26.00</span></div><a href="https://wa.me/51905989258?text=CanvaEdu" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Capcut Pro</h3><p>Edición Pro</p><div class="price-box"><span class="price-value">S/ 22.00</span></div><a href="https://wa.me/51905989258?text=Capcut" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>ChatGPT Plus</h3><p>Inteligencia Art.</p><div class="price-box"><span class="price-value">S/ 20.00</span></div><a href="https://wa.me/51905989258?text=ChatGPT" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Gemini Ultra</h3><p>Google IA</p><div class="price-box"><span class="price-value">S/ 25.00</span></div><a href="https://wa.me/51905989258?text=Gemini" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Office 365 x5</h3><p>Licencia Completa</p><div class="price-box"><span class="price-value">S/ 38.00</span></div><a href="https://wa.me/51905989258?text=Office" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Windows 11 Home</h3><p>Licencia Digital</p><div class="price-box"><span class="price-value">S/ 30.00</span></div><a href="https://wa.me/51905989258?text=WindowsHome" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Windows 11 Pro</h3><p>Para Empresas</p><div class="price-box"><span class="price-value">S/ 35.00</span></div><a href="https://wa.me/51905989258?text=WindowsPro" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Surfshark VPN</h3><p>Navega Seguro</p><div class="price-box"><span class="price-value">S/ 26.00</span></div><a href="https://wa.me/51905989258?text=Surfshark" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>NordVPN</h3><p>Máxima Seguridad</p><div class="price-box"><span class="price-value">S/ 28.00</span></div><a href="https://wa.me/51905989258?text=NordVPN" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Eset Nod32</h3><p>Antivirus 1 Año</p><div class="price-box"><span class="price-value">S/ 35.00</span></div><a href="https://wa.me/51905989258?text=EsetNod" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Eset Internet Sec.</h3><p>Antivirus Completo</p><div class="price-box"><span class="price-value">S/ 38.00</span></div><a href="https://wa.me/51905989258?text=EsetSec" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Duolingo Plus</h3><p>Idiomas sin límites</p><div class="price-box"><span class="price-value">S/ 11.00</span></div><a href="https://wa.me/51905989258?text=Duolingo" class="btn-buy">COMPRAR</a></div>
+        <div class="card"><h3>Remini Pro</h3><p>Mejora tus fotos</p><div class="price-box"><span class="price-value">S/ 12.00</span></div><a href="https://wa.me/51905989258?text=Remini" class="btn-buy">COMPRAR</a></div>
+    </div>
+</div>
+
+<footer>
+    <div class="payment-pill"><i class="fas fa-mobile-alt"></i> Aceptamos YAPE y PLIN</div>
+    <p>© 2026 Jireh Streaming Perú • Soporte VIP 24/7</p>
+</footer>
+
+<a href="https://wa.me/51905989258" class="floating-ws"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
