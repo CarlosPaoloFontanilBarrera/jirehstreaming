@@ -14,15 +14,17 @@
         :root { 
             --primary: #FF8C00;
             --secondary: #FF1493;
-            --bg: #0a0a0a;
-            --card: #1a1a1a;
-            --card-hover: #252525;
-            --text: #ffffff;
-            --text-secondary: #b0b0b0;
+            --bg: #ffffff;
+            --card: #f8f9fa;
+            --card-hover: #ffffff;
+            --text: #1a1a1a;
+            --text-secondary: #6b7280;
             --whatsapp: #25d366;
             --accent: #FFB347;
+            --border: #e5e7eb;
             --gradient: linear-gradient(135deg, #FF8C00 0%, #FF1493 100%);
-            --shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+            --shadow: 0 4px 20px rgba(255, 140, 0, 0.15);
+            --shadow-hover: 0 8px 30px rgba(255, 140, 0, 0.25);
         }
         
         * {
@@ -40,24 +42,13 @@
         }
         
         header { 
-            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%); 
+            background: #ffffff;
             padding: 50px 20px 40px; 
             text-align: center; 
             border-bottom: 3px solid;
             border-image: var(--gradient) 1;
             position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.15) 0%, transparent 60%);
-            pointer-events: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
         .logo-container {
@@ -70,7 +61,7 @@
             height: auto;
             margin: 0 auto 20px;
             display: block;
-            filter: drop-shadow(0 8px 20px rgba(255, 140, 0, 0.4));
+            filter: drop-shadow(0 4px 15px rgba(255, 140, 0, 0.2));
             animation: logoFloat 3s ease-in-out infinite;
         }
         
@@ -148,7 +139,7 @@
         
         .card { 
             background: var(--card); 
-            border: 1px solid rgba(255, 140, 0, 0.15);
+            border: 2px solid var(--border);
             border-radius: 16px; 
             padding: 20px; 
             text-align: center; 
@@ -177,7 +168,7 @@
             transform: translateY(-8px); 
             background: var(--card-hover);
             border-color: var(--primary);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-hover);
         }
         
         .badge {
@@ -192,7 +183,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 10px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
             animation: pulse 2s infinite;
         }
         
@@ -219,7 +210,7 @@
         }
         
         .price-box { 
-            background: rgba(255, 140, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 20, 147, 0.1) 100%);
             padding: 12px; 
             border-radius: 12px; 
             margin-bottom: 15px;
@@ -250,12 +241,13 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
         }
         
         .btn-buy:hover {
             background: #20bd5a;
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
         
         .btn-buy i {
@@ -263,11 +255,12 @@
         }
         
         footer { 
-            background: #000; 
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
             padding: 40px 20px; 
             text-align: center; 
             margin-top: 60px; 
-            border-top: 1px solid rgba(255, 140, 0, 0.2);
+            border-top: 3px solid;
+            border-image: var(--gradient) 1;
         }
         
         .payment-pill { 
@@ -305,7 +298,7 @@
             color: #fff; 
             z-index: 1000; 
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             animation: bounce 2s infinite;
         }
@@ -317,7 +310,7 @@
         
         .floating-ws:hover { 
             transform: scale(1.15); 
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
         }
         
         @media (max-width: 768px) { 
